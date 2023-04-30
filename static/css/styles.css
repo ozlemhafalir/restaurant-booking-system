@@ -1,0 +1,42 @@
+main {
+    min-height: 60vh;
+    padding: 30px 0;
+}
+
+a, a:hover, a:visited, a.active {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.color-site-primary, a.color-site-primary:hover, a.color-site-primary:visited, a.color-site-primary:focus, a.color-site-primary:active, a.color-site-primary.active {
+    text-decoration: none;
+    color: #FF6D60;
+}
+
+.bg-site-primary {
+    background-color: #FF6D60;
+    color: #FFFFFF;
+}
+
+.card-image-top-div {
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.restaurant-card:hover {
+    transform: scale(1.01);
+}
+
+.restaurant-card {
+    transition: all .2s ease-in-out;
+}
+
+.color-site-primary {
+    color: #FF6D60;
+}
+
+.text-size-sm {
+    font-size: small;
+}

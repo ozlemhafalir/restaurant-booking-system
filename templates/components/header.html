@@ -1,0 +1,29 @@
+{% load static %}
+
+<header class="p-2">
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold color-site-primary d-flex" href="/">
+                <img src="{% static 'images/food.png' %}"
+                     class="me-3" height="32px"
+                     width="32px"
+                     alt="Restaurant Booking"/>Restaurant
+                Booking</a>
+            {% if request.user.is_authenticated %}
+            <div class="dropdown">
+                <a class="btn btn-link color-site-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ request.user.username }}
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="/account/reservations">Account</a></li>
+                    <li><a class="dropdown-item" href="/account/restaurant/inbox">Restaurant</a></li>
+                    <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            </div>
+            {% else %}
+                <a class="color-site-primary" href="{% url 'login' %}">Login</a>
+            {% endif %}
+        </div>
+    </nav>
+</header>

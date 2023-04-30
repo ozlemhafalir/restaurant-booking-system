@@ -1,0 +1,12 @@
+<a href="/restaurant/{{restaurant.id}}">
+    <div class="card border-0 rounded-4 restaurant-card">
+        {% with image=restaurant.images.first %}
+        <div class="card-img-top card-image-top-div rounded-4" style="background-image: url({{image.image.url}});"></div>
+        {% endwith %}
+        <div class="card-body">
+            <h5 class="card-title">{{restaurant.name}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+        </div>
+    </div>
+</a>
